@@ -253,7 +253,7 @@
         <input type="text" name="adresse" required placeholder="اكتب العنوان الكامل">
     </div>
 
-    <button type="submit">تأكيد الطلب – 5900 دج والتوصيل مجاني</button>
+    <button type="submit">تأكيد الطلب – 3900 دج والتوصيل مجاني</button>
 </form>
 
 
@@ -263,40 +263,7 @@
     جميع الحقوق محفوظة © 2026
 </footer>
 
-<script>
-  
-        const form = document.getElementById('orderForm');
-        form.addEventListener('submit', function(event) {
-            // منع إرسال النموذج بالطريقة الافتراضية
-            event.preventDefault();
 
-            // جمع بيانات النموذج
-            const formData = new FormData(form);
-
-            // إرسال البيانات إلى السكربت الذي أنشأته
-            const url = 'https://script.google.com/macros/s/AKfycbwXNCWDfeIdpn87poUUnwoK1Mx2YEM3hiSizKZ3azBKIbf2F-7mxtAiWEfTWjqleUvQ/exec'; // استبدل هذا الرابط برابط السكربت الخاص بك
-            fetch(url, {
-                method: 'POST',
-                body: formData
-            }).then(response => {
-                if (response.ok) {
-                    // إذا كان الإرسال ناجحًا، أظهر الرسالة المنبثقة
-                    alert('تم إرسال معلوماتك! سنتصل بك لتأكيد الطلبية قريباً أيها الناجح المتفوق.');
-                    form.reset(); // إعادة تعيين الحقول
-                } else {
-                    alert('عذراً، حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى.');
-                }
-            }).catch(error => {
-                console.error('Error:', error);
-                alert('عذراً، حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى.');
-            });
-        });
-    
-</script>
-
-<footer>
-    <p>© 2025 جميع الحقوق محفوظة | جهاز التدليك الاحترافي</p>
-</footer>
 
 </body>
 </html>
